@@ -23,10 +23,20 @@ body {
 
 h2 {
   color: hsl(14, 45%, 36%);
+  font-weight: 500;
 }
 
-h3 {
+.time-heading {
   color: hsl(332, 51%, 32%);
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 0.25em;
+}
+
+.time {
+  background-color: hsl(330, 100%, 98%);
+  padding: 1.5rem;
+  border-radius: 15px;
 }
 
 .container figure {
@@ -56,7 +66,7 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: hsl(330, 100%, 98%);
+  background-color: hsl(0, 0%, 100%);
   border-radius: 1.25em;
   margin-top: 7.7rem;
 }
@@ -70,18 +80,12 @@ h3 {
 
 .heading {
   font-size: 44px;
-  font-weight: 600;
+  font-weight: 400;
   color: hsl(24, 5%, 18%);
 }
 
 .time {
-  margin: 2em 0 2em 1.5em;
-}
-
-.time h3 {
-  font-size: 20px;
-  font-weight: 700;
-  padding-bottom: 0.75em;
+  margin: 1em 0 0.25em 0;
 }
 
 .time ul {
@@ -89,7 +93,7 @@ h3 {
 }
 
 .time li {
-  padding: 0.5em 1em;
+  padding: 0.25em 1em;
 }
 
 .time li::marker {
@@ -101,7 +105,7 @@ h3 {
 }
 
 .ingredients h2 {
-  padding-bottom: 0.75em;
+  padding-bottom: 0.5em;
 }
 
 .ingredients ul {
@@ -110,6 +114,10 @@ h3 {
 
 .ingredients li {
   padding: 0.25em 1em;
+}
+
+.ingredients li::marker {
+  color: hsl(14, 45%, 36%);
 }
 
 .instruction {
@@ -129,7 +137,7 @@ h3 {
 }
 
 .instruction li::marker {
-  font-weight: 800;
+  font-weight: 700;
   color: hsl(14, 45%, 36%);
 }
 
@@ -170,7 +178,7 @@ table tr:last-child td {
 
 .weight {
   color: hsl(14, 45%, 36%);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .attribution {
