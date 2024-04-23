@@ -4,15 +4,20 @@
   padding: 0;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   background-color: hsl(30, 54%, 90%);
   color: hsl(30, 10%, 34%);
   font-family: "Outfit", sans-serif;
   min-height: 1955px;
   font-size: 16px;
-  display: grid;
+  display: flex;
   justify-content: center;
-  align-content: center;
   line-height: 1.5;
 }
 
@@ -24,10 +29,17 @@ h3 {
   color: hsl(332, 51%, 32%);
 }
 
-img {
-  height: 300px;
-  width: 656px;
-  border-radius: 10px;
+.container figure {
+  width: 100%;
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header-img {
+  width: 100%;
+  margin-top: 2.5rem;
+  border-radius: 0.8rem;
 }
 
 .heading,
@@ -39,17 +51,21 @@ img {
 
 .container {
   width: 100%;
-  max-width: 736px;
+  max-width: 46em;
   height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 1.25em;
+  margin-top: 7.7rem;
 }
 
 .recipe {
-  background-color: hsl(330, 100%, 98%);
   display: flex;
   flex-direction: column;
-  padding: 40px;
-  border-radius: 20px;
-  gap: 20px;
+  padding: 2.5em;
+  gap: 1.25em;
 }
 
 .heading {
@@ -59,21 +75,21 @@ img {
 }
 
 .time {
-  margin: 32px 0 32px 24px;
+  margin: 2em 0 2em 1.5em;
 }
 
 .time h3 {
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 12px;
+  padding-bottom: 0.75em;
 }
 
 .time ul {
-  margin-left: 24px;
+  margin-left: 1.5em;
 }
 
 .time li {
-  padding: 8px 16px;
+  padding: 0.5em 1em;
 }
 
 .time li::marker {
@@ -81,35 +97,35 @@ img {
 }
 
 .ingredients {
-  margin-bottom: 12px;
+  margin-bottom: 0.75em;
 }
 
 .ingredients h2 {
-  padding-bottom: 12px;
+  padding-bottom: 0.75em;
 }
 
 .ingredients ul {
-  margin-left: 24px;
+  margin-left: 1.5em;
 }
 
 .ingredients li {
-  padding: 4px 16px;
+  padding: 0.25em 1em;
 }
 
 .instruction {
-  margin-bottom: 12px;
+  margin-bottom: 0.75em;
 }
 
 .instruction h2 {
-  padding-bottom: 12px;
+  padding-bottom: 0.75em;
 }
 
 .instruction ol {
-  margin-left: 24px;
+  margin-left: 1.5em;
 }
 
 .instruction li {
-  padding: 4px 16px;
+  padding: 0.25em 1em;
 }
 
 .instruction li::marker {
@@ -118,15 +134,15 @@ img {
 }
 
 .border {
-  border-bottom: 0.5px solid hsl(30, 18%, 87%);
+  border-bottom: 0.0313em solid hsl(30, 18%, 87%);
 }
 
 .nutrition h2 {
-  padding-bottom: 12px;
+  padding-bottom: 0.75em;
 }
 
 .nutrition p {
-  padding-bottom: 12px;
+  padding-bottom: 0.75em;
 }
 
 table {
@@ -137,15 +153,15 @@ table {
 
 td {
   width: 25%;
-  border-bottom: 1px solid hsl(30, 18%, 87%);
+  border-bottom: 0.0625em solid hsl(30, 18%, 87%);
 }
 
 .nutrition_name {
-  padding: 12px 32px;
+  padding: 0.75em 2em;
 }
 
 .weight {
-  padding: 12px 8px;
+  padding: 0.75em 0.5em;
 }
 
 table tr:last-child td {
@@ -158,9 +174,29 @@ table tr:last-child td {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 736px) {
+  body {
+    min-height: fit-content;
+  }
+  .container {
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .container figure {
+    padding: 0;
+  }
+
+  .header-img {
+    margin: 0;
+    border-radius: 0;
+  }
 }
